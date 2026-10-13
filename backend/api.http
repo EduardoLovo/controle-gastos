@@ -2,3 +2,21 @@
 
 ### Health
 GET {{baseUrl}}/health
+
+### Listar categorias
+GET {{baseUrl}}/categories
+
+### Criar categoria
+POST {{baseUrl}}/categories
+Content-Type: application/json
+
+{ "name": "Mercado" }
+
+### Criar categoria inválida (espera 400)
+POST {{baseUrl}}/categories
+Content-Type: application/json
+
+{ "name": "" }
+
+### Excluir categoria
+DELETE {{baseUrl}}/categories/1
